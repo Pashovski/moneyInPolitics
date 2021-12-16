@@ -7,7 +7,7 @@ end
 
 
 def legislator_set
-    states = [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'ND', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ]
+    states = [ 'AL', 'AK', 'AZ', 'AR', 'CA']
     api_data = {key: open_secrets_key}
     states.each do |state|
     legislators = RestClient.get("http://www.opensecrets.org/api/?method=getLegislators&id=#{state}&apikey=#{api_data[:key]}")
@@ -54,3 +54,5 @@ legislator16 = Legislator.create(name: 'Alan Cinsavich', party: 'independent', w
 # contribution3 = Contribution.create(organization: "Pork-Based Vape Juice", amount: 10000, legislator_id: 2)
 
 user = User.create(username: "test", password: "password")
+
+# 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'ND', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' 
