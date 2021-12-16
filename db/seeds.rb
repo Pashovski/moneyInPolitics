@@ -1,12 +1,12 @@
 # # require 'rest-client'
 # # Legislator.destroy_all
 # # Contribution.destroy_all
-# def open_secrets_key
-#     ENV["API_KEY"]
-# end
+def open_secrets_key
+    ENV["API_KEY"]
+end
 
 
-# def legislator_set
+def legislator_set
     states = [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'ND', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ]
     api_data = {key: open_secrets_key}
     states.each do |state|
@@ -29,7 +29,7 @@
     end
 end
 
-# legislator_set()
+legislator_set()
 # legislator = Legislator.create(name: 'Gorp', party: 'republican', website_url: "google.com")
 
 # legislator2 = Legislator.create(name: 'Thorp', party: 'democrat', website_url: "yahoo.com")
